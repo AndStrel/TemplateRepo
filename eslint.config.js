@@ -8,9 +8,8 @@ import prettier from 'eslint-plugin-prettier';
 
 export default [
   {
-    ignores: ['dist', 'vite.config.ts'], // Игнорируем папку dist
+    ignores: ['dist', 'vite.config.ts'],
   },
-  // Конфиг для TypeScript файлов
   {
     files: ['**/*.{ts,tsx}'],
     languageOptions: {
@@ -18,15 +17,15 @@ export default [
       globals: globals.browser,
       parser: parser,
       parserOptions: {
-        project: './tsconfig.json', // Путь к tsconfig.json
+        project: './tsconfig.json',
         sourceType: 'module',
       },
     },
     plugins: {
-      'react-hooks': reactHooks, // Плагин React Hooks
-      'react-refresh': reactRefresh, // Плагин React Refresh
-      '@typescript-eslint': tsEslint, // Плагин TypeScript
-      prettier, // Плагин Prettier
+      'react-hooks': reactHooks,
+      'react-refresh': reactRefresh,
+      '@typescript-eslint': tsEslint,
+      prettier,
     },
     rules: {
       'react-refresh/only-export-components': [
@@ -36,7 +35,6 @@ export default [
       '@typescript-eslint/explicit-module-boundary-types': 'off',
     },
   },
-  // Конфиг для всех JS, JSX, TS, и TSX файлов
   {
     files: ['**/*.js', '**/*.jsx', '**/*.ts', '**/*.tsx'],
     languageOptions: {
@@ -54,7 +52,7 @@ export default [
         { allowConstantExport: true },
       ],
       indent: ['error', 2],
-      'prettier/prettier': 'error', // Правило для Prettier
+      'prettier/prettier': 'error',
     },
   },
 ];
