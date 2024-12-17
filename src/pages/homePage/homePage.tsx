@@ -1,5 +1,4 @@
 import { useNavigate } from 'react-router-dom';
-import { Button } from '../../components';
 import { RootState, useAppDispatch, useAppSelector } from '../../store/store';
 import { login } from '../../store/slices';
 import { useEffect } from 'react';
@@ -20,5 +19,11 @@ export const HomePage: React.FC = () => {
     }
   }, [isAuthenticated, navigate]);
 
-  return <HomePageUI handleLogin={handleLogin} />;
+  return (
+    <HomePageUI
+      title="Главная страница"
+      description="Добро пожаловать!"
+      handleLogin={handleLogin}
+    />
+  );
 };

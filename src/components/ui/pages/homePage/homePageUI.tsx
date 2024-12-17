@@ -1,7 +1,7 @@
 import { Button } from '../../../button';
 import { HomePageUIProps } from './type';
 
-export const HomePageUI: React.FC = ({
+export const HomePageUI: React.FC<HomePageUIProps> = ({
   title = 'Home Page',
   description = 'Welcome to the home page!',
   handleLogin,
