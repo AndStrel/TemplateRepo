@@ -3,6 +3,7 @@ import { Button } from '../../components';
 import { RootState, useAppDispatch, useAppSelector } from '../../store/store';
 import { login } from '../../store/slices';
 import { useEffect } from 'react';
+import { HomePageUI } from '../../components/ui/pages';
 
 export const HomePage: React.FC = () => {
   const dispatch = useAppDispatch();
@@ -19,13 +20,5 @@ export const HomePage: React.FC = () => {
     }
   }, [isAuthenticated, navigate]);
 
-  return (
-    <div>
-      <h1>Home Page</h1>
-      <p>Welcome to the home page!</p>
-      <Button variant="primary" onClick={handleLogin}>
-        Log In
-      </Button>
-    </div>
-  );
+  return <HomePageUI handleLogin={handleLogin} />;
 };
