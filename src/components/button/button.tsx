@@ -6,6 +6,7 @@ export const Button: React.FC<ButtonProps> = ({
   variant = 'primary',
   icon,
   children,
+  onClick,
 }) => {
   return (
     <button
@@ -13,10 +14,9 @@ export const Button: React.FC<ButtonProps> = ({
         styles.button,
         styles[`button__${variant}`], // Модификатор
       )}
+      onClick={onClick}
     >
-      {icon && <span className={styles.button__icon}>{icon}</span>}{' '}
-      {/* Элемент */}
-      {children}
+      {icon && <span className={styles.button__icon}>{icon}</span>} {children}
     </button>
   );
 };
