@@ -1,8 +1,8 @@
 import { logout } from '../../store/slices/authSlice';
-import { Button } from '../../components';
 import { useNavigate } from 'react-router-dom';
 import { RootState, useAppDispatch, useAppSelector } from '../../store/store';
 import { useEffect } from 'react';
+import { ProfilePageUI } from '../../components/ui/pages';
 
 export const ProfilePage: React.FC = () => {
   const dispatch = useAppDispatch();
@@ -23,12 +23,11 @@ export const ProfilePage: React.FC = () => {
   }, [isAuthenticated, navigate]);
 
   return (
-    <div>
-      <h1>Profile Page</h1>
-      <p>Welcome, {user?.name}!</p>
-      <Button variant="secondary" onClick={handleLogout}>
-        Log Out
-      </Button>
-    </div>
+    <ProfilePageUI
+      title="Профиль"
+      description="Проходи не стесняйся!"
+      name={user?.name}
+      handleLogout={handleLogout}
+    />
   );
 };

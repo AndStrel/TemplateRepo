@@ -10,7 +10,7 @@ export const HomePage: React.FC = () => {
   const { isAuthenticated } = useAppSelector((state: RootState) => state.auth);
 
   const handleLogin = () => {
-    dispatch(login({ name: 'John Doe', email: 'johndoe@example.com' }));
+    dispatch(login({ name: 'Sebastian', email: 'Sebastian@mail.ru' }));
   };
   // Если пользователь уже авторизован, перенаправляем его на страницу профиля
   useEffect(() => {
