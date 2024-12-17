@@ -1,8 +1,8 @@
 import { useNavigate } from 'react-router-dom';
-import { Button } from '../../components';
 import { RootState, useAppDispatch, useAppSelector } from '../../store/store';
 import { login } from '../../store/slices';
 import { useEffect } from 'react';
+import { HomePageUI } from '../../components/ui/pages';
 
 export const HomePage: React.FC = () => {
   const dispatch = useAppDispatch();
@@ -10,7 +10,7 @@ export const HomePage: React.FC = () => {
   const { isAuthenticated } = useAppSelector((state: RootState) => state.auth);
 
   const handleLogin = () => {
-    dispatch(login({ name: 'John Doe', email: 'johndoe@example.com' }));
+    dispatch(login({ name: 'Sebastian', email: 'Sebastian@mail.ru' }));
   };
   // Если пользователь уже авторизован, перенаправляем его на страницу профиля
   useEffect(() => {
@@ -20,12 +20,10 @@ export const HomePage: React.FC = () => {
   }, [isAuthenticated, navigate]);
 
   return (
-    <div>
-      <h1>Home Page</h1>
-      <p>Welcome to the home page!</p>
-      <Button variant="primary" onClick={handleLogin}>
-        Log In
-      </Button>
-    </div>
+    <HomePageUI
+      title="Главная страница"
+      description="Добро пожаловать!"
+      handleLogin={handleLogin}
+    />
   );
 };
