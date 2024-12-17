@@ -1,9 +1,9 @@
-import styles from "./button.module.scss";
-import clsx from "clsx";
-import { ButtonProps } from "./type";
+import styles from './button.module.scss';
+import clsx from 'clsx';
+import { ButtonProps } from './type';
 
 export const Button: React.FC<ButtonProps> = ({
-  variant = "primary",
+  variant = 'primary',
   icon,
   children,
 }) => {
@@ -11,10 +11,10 @@ export const Button: React.FC<ButtonProps> = ({
     <button
       className={clsx(
         styles.button,
-        styles[`button__${variant}`] // Модификатор
+        styles[`button__${variant}`], // Модификатор
       )}
     >
-      {icon && <span className={styles.button__icon}>{icon}</span>}{" "}
+      {icon && <span className={styles.button__icon}>{icon}</span>}{' '}
       {/* Элемент */}
       {children}
     </button>
