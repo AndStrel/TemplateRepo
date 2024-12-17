@@ -1,4 +1,4 @@
-import { Button } from '../../../button';
+import { Button } from '../../button';
 import { HomePageUIProps } from './type';
 
 export const HomePageUI: React.FC<HomePageUIProps> = ({
