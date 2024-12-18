@@ -54,3 +54,7 @@ export function useCountdownTimer(targetDate: string) {
    */
   return timeLeft;
 }
+
+// Пример использования:
+// const timeLeft = useCountdownTimer('2025-01-01T00:00:00');
+// console.log(`До Нового года осталось: ${timeLeft.days} дней`);
