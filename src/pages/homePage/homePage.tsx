@@ -1,6 +1,10 @@
 import { useNavigate } from 'react-router-dom';
-import { RootState, useAppDispatch, useAppSelector } from '../../store/store';
-import { login } from '../../store/slices';
+import {
+  RootState,
+  useAppDispatch,
+  useAppSelector,
+} from '../../utils/store/store';
+import { login } from '../../utils/slices';
 import { useEffect } from 'react';
 import { HomePageUI } from '../../components/ui/pages';
 
