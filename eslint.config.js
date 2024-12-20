@@ -8,7 +8,7 @@ import prettier from 'eslint-plugin-prettier';
 
 export default [
   {
-    ignores: ['dist', 'vite.config.ts'],
+    ignores: ['dist', 'vite.config.ts', 'jest.config.ts'],
   },
   {
     files: ['**/*.{ts,tsx}'],

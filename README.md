@@ -1,6 +1,6 @@
 # TemplateRepo
 
-Шаблонный репозиторий для проектов с использованием Vite, TypeScript, SCSS, Jest и Cypress.
+Шаблонный репозиторий для проектов с использованием Vite, TypeScript, SCSS, Husky Jest и Cypress.
 
 ## Стек технологий:
 
