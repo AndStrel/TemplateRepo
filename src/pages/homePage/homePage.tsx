@@ -1,12 +1,8 @@
 import { useNavigate } from 'react-router-dom';
-import {
-  RootState,
-  useAppDispatch,
-  useAppSelector,
-} from '../../utils/store/store';
-import { login } from '../../utils/slices';
+import { RootState, useAppDispatch, useAppSelector } from '@utils/store';
+import { login } from '@slices/authSlice';
 import { useEffect } from 'react';
-import { HomePageUI } from '../../components/ui/pages';
+import { HomePageUI } from '@ui/pages';
 
 export const HomePage: React.FC = () => {
   const dispatch = useAppDispatch();

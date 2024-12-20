@@ -1,6 +1,6 @@
 import authReducer, { login, logout } from './authSlice';
-import { TUser } from '../../../types';
-import { expect, test, describe } from '@jest/globals';
+import { expect, describe } from '@jest/globals';
+import { TUser } from 'types/user';
 
 describe('authSlice', () => {
   const initialState = {
