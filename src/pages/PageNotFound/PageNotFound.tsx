@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-import { PageNotFoundUI } from '@components/ui/pages/PageNotFoundUI';
+import { PageNotFoundUI } from '@ui/pages/PageNotFoundUI';
 
 export const PageNotFound: React.FC = () => {
   const navigate = useNavigate();

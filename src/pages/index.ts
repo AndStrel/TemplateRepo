@@ -1,3 +1,3 @@
 export * from './homePage';
 export * from './profilePage';
-export * from './PageNotFoundUI';
+export * from './PageNotFound';
